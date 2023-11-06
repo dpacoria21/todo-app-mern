@@ -1,11 +1,12 @@
 interface Props {
     title: string,
-    px: number,
-    py: number
+    px: string,
+    py: string,
+    rounded: string,
 }
-export const Button = ({title, px, py}: Props) => {
+export const Button = ({title, px, py, rounded}: Props) => {
     return (
-        <button type="submit" className={`px-${px} py-${py} tracking-widest transition-all duration-300 ease-in-out rounded-sm shadow-md active:shadow-lg active:scale-95 bg-electric-violet-500 text-slate-200 font-russo-one`}>
+        <button type="submit" className={`${px} ${py} tracking-widest transition-all duration-100 ease-in-out ${rounded} shadow-md active:shadow-lg active:scale-95 bg-electric-violet-500 hover:bg-electric-violet-600 text-slate-200 font-russo-one`}>
             {title}
         </button>
     );
